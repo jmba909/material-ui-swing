@@ -36,7 +36,7 @@ public class MaterialTextFieldUI extends MaterialComponentField {
 	protected static final String ProprietyPrefix = "TextField";
 
 	public MaterialTextFieldUI() {
-		this(true);
+		this(false);
 	}
 
 	public MaterialTextFieldUI(boolean drawLine) {

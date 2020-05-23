@@ -73,10 +73,14 @@ import sun.awt.SunToolkit;
 
 import javax.swing.*;
 import javax.swing.plaf.BorderUIResource;
+import javax.swing.plaf.ColorUIResource;
 import javax.swing.plaf.InsetsUIResource;
 import javax.swing.plaf.basic.BasicLookAndFeel;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.text.DefaultEditorKit;
+
+import jiconfont.icons.google_material_design_icons.GoogleMaterialDesignIcons;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.lang.reflect.Method;
@@ -215,7 +219,7 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put("CheckBoxUI", checkBoxUI);
 		table.put("RadioButtonUI", radioButtonUI);
 		table.put("TabbedPaneUI", tabbedPaneUI);
-		table.put("ToggleButtonUI", toggleButtonUI);
+//		table.put("ToggleButtonUI", toggleButtonUI);
 		table.put("ScrollBarUI", scrollBarUI);
 		table.put("ComboBoxUI", comboBoxUI);
 		table.put("PopupMenuUI", popupMenuUI);
@@ -456,12 +460,12 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put("Table.showHorizontalLines", false);
 		table.put("Table.intercellSpacing", new java.awt.Dimension(0, 0));
 
-		table.put("TableHeader.background", theme.getBackgroundTableHeader());
-		table.put("TableHeader.foreground", theme.getForegroundTableHeader());
-		table.put("TableHeader.border", theme.getBorderTableHeader());
+		table.put("TableHeader.background", new Color(60,60,60));
+		table.put("TableHeader.foreground", new Color(218,218,218));
+		table.put("TableHeader.border", new Color(60,60,60));
 		table.put("TableHeader.font", theme.getFontBold());
-		table.put("TableHeader.cellBorder", theme.getCellBorderTableHeader());
-		table.put("TableHeader.gridColor", theme.getBackgroundTableHeader());
+		table.put("TableHeader.cellBorder", new Color(60,60,60));
+		table.put("TableHeader.gridColor", new Color(60,60,60));
 
 		table.put("TextArea.background", theme.getBackgroundTextField());
 		table.put("TextArea.border", theme.getBorderTextField());
@@ -473,21 +477,22 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		
 		table.put("TextPane.caretForeground", theme.getTextColor());
 
-		table.put("ToggleButton.border", BorderFactory.createEmptyBorder());
-		table.put("ToggleButton.font", theme.getFontRegular());
-		table.put("ToggleButton.background", theme.getBackgroundPrimary());
-		table.put("ToggleButton.select", theme.getHighlightBackgroundPrimary());
-		table.put("ToggleButton.foreground", theme.getTextColor());
-		table.put("ToggleButton.disabledText", theme.getDisableTextColor());
-		table.put("ToggleButton.icon", theme.getUnselectedIconToggleButton());
-		table.put("ToggleButton.selectedIcon", theme.getSelectedIconToggleButton());
-		table.put("ToggleButton.withoutIcon", theme.isWithoutIconToggleButton());
-		table.put("ToggleButton[withoutIcon].selectedBackground", theme.getWithoutIconSelectedBackgroundToggleButton());
-		table.put("ToggleButton[withoutIcon].selectedForeground", theme.getWithoutIconSelectedForegoundToggleButton());
-		table.put("ToggleButton[withoutIcon].background", theme.getWithoutIconBackgroundToggleButton());
-		table.put("ToggleButton[withoutIcon].foreground", theme.getWithoutIconForegroundToggleButton());
-		table.put("ToggleButton[withoutIcon].selectedBorder", theme.getWithoutIconSelectedBorderToggleButton());
-		table.put("ToggleButton[withoutIcon].border", theme.getWithoutIconBorderToggleButton());
+		// JMBA - Remove look and feel for toggle button to customize look and feel
+//		table.put("ToggleButton.border", BorderFactory.createEmptyBorder());
+//		table.put("ToggleButton.font", theme.getFontRegular());
+//		table.put("ToggleButton.background", theme.getBackgroundPrimary());
+//		table.put("ToggleButton.select", theme.getHighlightBackgroundPrimary());
+//		table.put("ToggleButton.foreground", theme.getTextColor());
+//		table.put("ToggleButton.disabledText", theme.getDisableTextColor());
+//		table.put("ToggleButton.icon", theme.getUnselectedIconToggleButton());
+//		table.put("ToggleButton.selectedIcon", theme.getSelectedIconToggleButton());
+//		table.put("ToggleButton.withoutIcon", theme.isWithoutIconToggleButton());
+//		table.put("ToggleButton[withoutIcon].selectedBackground", theme.getWithoutIconSelectedBackgroundToggleButton());
+//		table.put("ToggleButton[withoutIcon].selectedForeground", theme.getWithoutIconSelectedForegoundToggleButton());
+//		table.put("ToggleButton[withoutIcon].background", theme.getWithoutIconBackgroundToggleButton());
+//		table.put("ToggleButton[withoutIcon].foreground", theme.getWithoutIconForegroundToggleButton());
+//		table.put("ToggleButton[withoutIcon].selectedBorder", theme.getWithoutIconSelectedBorderToggleButton());
+//		table.put("ToggleButton[withoutIcon].border", theme.getWithoutIconBorderToggleButton());
 
 		table.put("ToolBar.font", theme.getFontRegular());
 		table.put("ToolBar.background", theme.getBackgroundPrimary());
@@ -497,17 +502,23 @@ public class MaterialLookAndFeel extends MetalLookAndFeel {
 		table.put("ToolBar.floatingBackground", theme.getFloatingBackgroundToolBar());
 
 		table.put("Tree.font", theme.getFontRegular());
-		table.put("Tree.selectionForeground", theme.getHighlightBackgroundPrimary());
-		table.put("Tree.foreground", theme.getTextColor());
-		table.put("Tree.selectionBackground", theme.getSelectionBackgroundTree());
-		table.put("Tree.background", theme.getBackgroundPrimary());
+		table.put("Tree.selectionForeground", new ColorUIResource(240, 240, 240));
+		table.put("Tree.foreground", new ColorUIResource(229, 229, 229));
+		table.put("Tree.selectionBackground", new ColorUIResource(60, 60, 60));
+		table.put("Tree.background", new ColorUIResource(37, 37, 37));
 		table.put("Tree.selectionBorderColor", theme.getSelectionBorderColorTree());
 		table.put("Tree.border", theme.getBorderTree());
 		table.put("Tree.collapsedIcon", null);
 		table.put("Tree.expandedIcon", null);
-		table.put("Tree.closedIcon", theme.getClosedIconTree());
-		table.put("Tree.openIcon", theme.getOpenIconTree());
-		table.put("Tree.leafIcon", null);
+		table.put("Tree.closedIcon",  MaterialImageFactory.getInstance().getImage(
+                GoogleMaterialDesignIcons.KEYBOARD_ARROW_RIGHT,
+                new ColorUIResource(231,22,145)));
+		table.put("Tree.openIcon",  MaterialImageFactory.getInstance().getImage(
+                GoogleMaterialDesignIcons.KEYBOARD_ARROW_DOWN,
+                new ColorUIResource(231,22,145)));
+		table.put("Tree.leafIcon", MaterialImageFactory.getInstance().getImage(
+                GoogleMaterialDesignIcons.DONUT_SMALL,
+                new ColorUIResource(231,22,145)));
 
 		table.put("RadioButtonMenuItem.foreground", theme.getTextColor());
 		table.put("RadioButtonMenuItem.selectionForeground", theme.getTextColor());
