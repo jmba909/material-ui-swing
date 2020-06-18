@@ -154,23 +154,23 @@ public class JMarsDarkTheme extends AbstractMaterialTheme {
 
     @Override
     protected void installColor() {
-        this.backgroundPrimary = new ColorUIResource(45, 48, 56);
-        this.highlightBackgroundPrimary = new ColorUIResource(66,179,176);
+        this.backgroundPrimary = new ColorUIResource(60,60,60);
+        this.highlightBackgroundPrimary = new ColorUIResource(231,21,144);
 
-        this.textColor = new ColorUIResource(255, 255, 255);
+        this.textColor = MaterialColors.WHITE;
         this.disableTextColor = new ColorUIResource(170, 170, 170);
 
-        this.buttonBackgroundColor = new ColorUIResource(45, 48, 56);
-        this.buttonBackgroundColorMouseHover = new ColorUIResource(81, 86, 101);
+        this.buttonBackgroundColor = new ColorUIResource(231,21,144);
+        this.buttonBackgroundColorMouseHover = new ColorUIResource(138,12,86);
         this.buttonTextColor = MaterialColors.WHITE;
-        this.buttonDefaultBackgroundColorMouseHover = new ColorUIResource(23, 137, 134);
-        this.buttonDefaultBackgroundColor = new ColorUIResource(66,179,176);
+        this.buttonDefaultBackgroundColorMouseHover = new ColorUIResource(138,12,86);
+        this.buttonDefaultBackgroundColor = new ColorUIResource(231,21,144);
         this.buttonDefaultTextColor = MaterialColors.WHITE;
         this.buttonDisabledBackground = new ColorUIResource(66,69,76);
         this.buttonDisabledForeground = MaterialColors.GRAY_500;
-        this.buttonFocusColor = MaterialColors.WHITE;
+        this.buttonFocusColor = new ColorUIResource(138,12,86);
         this.buttonDefaultFocusColor = MaterialColors.BLACK;
-        this.buttonBorderColor = MaterialColors.WHITE;
+        this.buttonBorderColor = new ColorUIResource(231,21,144);
         this.buttonColorHighlight = buttonBackgroundColorMouseHover;
 
         this.selectedInDropDownBackgroundComboBox = new ColorUIResource(249, 192, 98);
@@ -178,7 +178,7 @@ public class JMarsDarkTheme extends AbstractMaterialTheme {
 
         this.menuBackground = backgroundPrimary;
         this.menuBackgroundMouseHover = buttonBackgroundColorMouseHover;
-        this.menuTextColor = MaterialColors.WHITE;
+        this.menuTextColor = MaterialColors.COSMO_BLACK;
         this.menuDisableBackground = MaterialColors.TRANSPANENT;
 
         this.arrowButtonColorScrollBar = buttonBackgroundColor;
@@ -199,7 +199,7 @@ public class JMarsDarkTheme extends AbstractMaterialTheme {
         this.disableColorTabTabbedPane = new ColorUIResource(170,170,170);
 
         this.backgroundTable = new ColorUIResource(45,48,56);
-        this.backgroundTableHeader = new ColorUIResource(66,179,176);
+        this.backgroundTableHeader = new ColorUIResource(231,21,144);
         this.foregroundTable = textColor;
         this.foregroundTableHeader = textColor;
         this.selectionBackgroundTable = new ColorUIResource(126, 132, 153);
@@ -213,9 +213,9 @@ public class JMarsDarkTheme extends AbstractMaterialTheme {
         this.selectionBackgroundTree = super.backgroundPrimary;
         this.selectionBorderColorTree = super.backgroundPrimary;
 
-        this.backgroundTextField = new ColorUIResource(81, 86, 101);
-        this.inactiveForegroundTextField = MaterialColors.WHITE;
-        this.inactiveBackgroundTextField = new ColorUIResource(81, 86, 101);
+        this.backgroundTextField = MaterialColors.WHITE;
+        this.inactiveForegroundTextField = MaterialColors.BLACK;
+        this.inactiveBackgroundTextField =  MaterialColors.WHITE;
         this.selectionBackgroundTextField = new ColorUIResource(249, 192, 98);
         super.disabledBackgroudnTextField = new ColorUIResource(81, 86, 101);
         super.disabledForegroundTextField = new ColorUIResource(170,170,170);

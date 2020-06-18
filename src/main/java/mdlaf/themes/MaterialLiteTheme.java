@@ -29,6 +29,8 @@ import mdlaf.utils.MaterialColors;
 import mdlaf.utils.MaterialFontFactory;
 import mdlaf.utils.MaterialImageFactory;
 
+import java.awt.Color;
+
 import javax.swing.*;
 
 /**
@@ -56,15 +58,15 @@ public class MaterialLiteTheme extends AbstractMaterialTheme {
 
     @Override
     protected void installIcons() {
-        this.selectedCheckBoxIcon = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX, highlightBackgroundPrimary);
+        this.selectedCheckBoxIcon = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX, new Color(231,22,145));
         this.unselectedCheckBoxIcon = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX_OUTLINE_BLANK);
 
         this.selectedRadioButtonIcon = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.RADIO_BUTTON_BLACK_ON);
         this.unselectedRadioButtonIcon = MaterialImageFactory.getInstance().getImage(MaterialImageFactory.RADIO_BUTTON_BLACK_OFF);
 
-        this.selectedCheckBoxIconTable = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX, highlightBackgroundPrimary);
+        this.selectedCheckBoxIconTable = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX, new Color(231,22,145));
         this.unselectedCheckBoxIconTable = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX_OUTLINE_BLANK);
-        this.selectedCheckBoxIconSelectionRowTable = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX, highlightBackgroundPrimary);
+        this.selectedCheckBoxIconSelectionRowTable = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX, new Color(231,22,145));
         this.unselectedCheckBoxIconSelectionRowTable = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.CHECK_BOX_OUTLINE_BLANK);
 
         this.closedIconTree = MaterialImageFactory.getInstance().getImage(GoogleMaterialDesignIcons.KEYBOARD_ARROW_RIGHT);
